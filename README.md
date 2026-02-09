@@ -51,16 +51,16 @@ Na raiz do projeto, execute:
 
 ```bash
 docker compose up -d
-
+```
 Esse comando irá subir o PostgreSQL e habilitar automaticamente a extensão pgVector.
 
 ---
 
 ### 3️⃣ Criar e Ativar Ambiente Virtual
+```
 python -m venv venv
 
-
-```Windows
+Windows
 
 venv\Scripts\activate
 
@@ -68,15 +68,17 @@ venv\Scripts\activate
 ```Linux / macOS
 
 source venv/bin/activate
+```
 
 ---
 
-### 4️⃣ Instalar Dependências
-pip install -r requirements.txt
+4️⃣ Instalar Dependências
+
+```pip install -r requirements.txt```
 
 ---
 
-### 5️⃣ Configurar Variáveis de Ambiente
+5️⃣ Configurar Variáveis de Ambiente
 
 Crie o arquivo .env a partir do exemplo:
 
@@ -95,27 +97,30 @@ PGVECTOR_COLLECTION=pdf_collection
 
 ---
 
-### 6️⃣ Ingestão do PDF
+6️⃣ Ingestão do PDF
 
 Coloque o arquivo document.pdf na raiz do projeto.
 
 Execute:
 
+```
 python src/ingest.py
-
+```
 
 Ou, para informar outro PDF:
 
+```
 python src/ingest.py caminho/para/arquivo.pdf
-
+```
 
 Ao final da execução, será exibida uma mensagem informando quantos chunks foram ingeridos.
 
 ---
 
-### 7️⃣ Executar o Chat (CLI)
+7️⃣ Executar o Chat (CLI)
+```
 python src/chat.py
-
+```
 
 Exemplo de uso:
 
